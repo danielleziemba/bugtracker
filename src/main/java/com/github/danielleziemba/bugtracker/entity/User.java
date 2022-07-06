@@ -3,6 +3,7 @@ package com.github.danielleziemba.bugtracker.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -18,6 +19,7 @@ public class User {
     private String username;
     private String password;
     // will need to be encrypted
+
 
     /********************************************/
 

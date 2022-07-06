@@ -9,4 +9,6 @@ public interface UserRepo extends JpaRepository<User, Long> {
      * BASIC CRUD OPERATIONS ONLY IN REPO *
      **************************************/
 
+    User findByUsername(String username);
+
 }

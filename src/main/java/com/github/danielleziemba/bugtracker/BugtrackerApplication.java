@@ -25,6 +25,7 @@ public class BugtrackerApplication {
 			userService.saveUser(new User(null, "stever", "1234"));
 
 			projectService.saveProject(new Project("Bugtracker Application", "stuff about the project", "In Progress"));
+
 		};
 	}
 

@@ -3,11 +3,11 @@ package com.github.danielleziemba.bugtracker.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -40,11 +40,24 @@ public class Project {
         this.status = status;
     }
 
+    @ManyToMany
+    @JoinTable(
+            name = "USERS_PROJECTS",
+            joinColumns = @JoinColumn(name = "PROJECT_ID", referencedColumnName = "ID"),
+            inverseJoinColumns = @JoinColumn(name = "USER_ID", referencedColumnName = "ID")
+    )
+    private List<User> users = new ArrayList<>();
+
+    public void addUser(User user) {
+        this.users.add(user);
+    }
+
     /******************************
      * TO BE LINKED AS FKS
      *     private User owner;
      *     private User developer;
      *     private Ticket ticket;
+     * ?   private Status status;
      ******************************/
 
 }

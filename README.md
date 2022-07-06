@@ -81,6 +81,10 @@ TBD
 ### Notes
 * create progress log
 * look into `JavaMailSender` dependency in Spring for notification email system
+* separate controllers for every entity or can I combine the roles entity methods with the User repo/service/controller
+  * each entity needs its own repo but they can share services based on business logic
+    * ie. user and role each need a separate repo but according to business logic, role can effectively live in the User services as they're linked
+    * ie. this would be the same i think for status and project *and* status and ticket?
 
 ---
 #### Progress Log

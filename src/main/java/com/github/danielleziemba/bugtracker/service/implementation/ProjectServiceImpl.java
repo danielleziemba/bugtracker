@@ -1,7 +1,8 @@
-package com.github.danielleziemba.bugtracker.service;
+package com.github.danielleziemba.bugtracker.service.implementation;
 
 import com.github.danielleziemba.bugtracker.entity.Project;
 import com.github.danielleziemba.bugtracker.repository.ProjectRepo;
+import com.github.danielleziemba.bugtracker.service.ProjectService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
