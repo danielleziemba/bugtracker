@@ -12,13 +12,14 @@ import javax.persistence.*;
 @Table(name = "tracker_user")
 public class User {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String password;
     // will need to be encrypted
 
-    /*********************************************/
+    /********************************************/
 
     // will be needed once mapped:
     // = projects

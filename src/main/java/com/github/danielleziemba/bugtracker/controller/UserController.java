@@ -20,6 +20,6 @@ public class UserController {
     @GetMapping("/users")
     public ResponseEntity<List<User>> listUsers() {
         return ResponseEntity.ok().body(userService.getAllUsers());
-    }
+    } // will need to be returned as a page eventually, limiting the results
 
 }
